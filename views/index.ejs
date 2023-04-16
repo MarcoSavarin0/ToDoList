@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TOdoLIST</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4d18b4db01.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <h2>
+      TO DO LIST
+    </h2>
+<button onclick="toggleDarkMode()" class="boton-modo" name="botonmodo"> Cambiar modo</button>
+    <table>
+      <tr>
+        <th>id</th>
+        <th>Tarea</th>
+        <th>Descripcion</th>
+        <th>Borrar</th>
+        <th>Editar</th>
+      </tr>
+      <% tareas.forEach(tarea => { %>
+      <tr>
+          <td><%= tarea.id %></td>
+          <td><%= tarea.tarea %></td>
+          <td><%= tarea.descripcion %></td>
+          <td>
+            <form action="/delete/<%= tarea.id %>" method="post">
+            <button type="submit">❌</button>
+          </form>
+          <td><a href="/edit/<%= tarea.id %>"><i class="fa-solid fa-pen-to-square"></i></a></td>
+      </tr>
+      <% }) %>
+      <a href="/create" class="create">CREAR</a>
+    </table>
+    <div class="footer">
+      <p>Creado por Marco Savarino</p>
+      <a href="https://github.com/MarcoSavarin0"><i class="fa-brands fa-github"></i></i></a>
+  </div>
+  <script src="/javascripts/index.js"></script>
+  </body>
+</html>

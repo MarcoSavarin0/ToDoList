@@ -1,0 +1,124 @@
+*{
+  font-family: 'Roboto', sans-serif;
+}
+.fa-pen-to-square{
+  color: #4aad23;
+}
+.boton-modo {
+  display: inline-block;
+  background-color: #007BFF;
+  color: white;
+  text-align: center;
+  padding: 12px 24px;
+  text-decoration: none;
+  cursor: pointer;
+  margin-bottom: 16px;
+  border: none;
+}
+
+.boton-modo:hover {
+  background-color: #0056b3;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+th {
+  background-color: #f2f2f2;
+}
+tr:hover {
+  background-color: #f9f9f9;
+}
+/* Estilos para el botón de eliminación */
+form {
+  display: inline-block;
+}
+button[type="submit"] {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+button[type="submit"]:hover {
+  background-color: #d32f2f;
+}
+/* Estilos para el título de la página */
+h2 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.create {
+  display: inline-block;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 12px 24px;
+  text-decoration: none;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+.create:hover {
+  background-color: #45a049;
+}
+.footer {
+  position: fixed; 
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  opacity: 0; 
+  font-size: 15px;
+  animation: fade-in 1s ease-in-out forwards
+}
+.fa-github{
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+}
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+h2 {
+  color: #000000;
+}
+/* Estilos para el modo nocturno */
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+body.dark-mode h2 {
+  color: #ffffff;
+}
+body.dark-mode th{
+  color: #000;
+}
+body.dark-mode tr:hover{
+  background-color:#f9f9f9 ;
+  color: #1e1e1e;
+}
+body.dark-mode .fa-pen-to-square{
+  color: #4fee11;
+}
+

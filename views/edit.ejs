@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/formCreate.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4d18b4db01.js" crossorigin="anonymous"></script>
+    <title>editar</title>
+</head>
+<body>
+    <button onclick="toggleDarkMode()" class="boton-modo">Cambiar Modo</button>
+    <form action="/edit/<%=dataJson.id%>" method="post">
+       <label>Tarea</label>
+        <input type="text" name="tarea" value="<%= dataJson.tarea %>">
+        <label>Descripcion</label>
+        <input type="text" name="descripcion" value="<%= dataJson.descripcion %>">
+        <button type="submit">Editar Tarea</button>
+    </form>
+    <div class="footer">
+        <p>Creado por Marco Savarino</p>
+        <i class="fa-brands fa-github"></i>
+    </div>
+    <script src="/javascripts/index.js"></script>
+</body>
+</html>
